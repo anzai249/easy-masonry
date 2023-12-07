@@ -30,12 +30,12 @@ export default {
     },
     data() {
         return {
-            opacity: 0
+            opacityImg: 0
         }
     },
     methods: {
         handleLoad() {
-            this.opacity = 1;
+            this.opacityImg = 1;
         }
     }
 }
@@ -43,11 +43,9 @@ export default {
 
 <style>
 .easy-image-container {
-    background-color: rgba(100, 100, 100, 0.4);
+    background-color: rgba(100, 100, 100, 0.2);
     position: relative;
-    /* width: 500px; */
-    /* height: 500px; */
-    border-radius: 4%;
+    border-radius: 10px;
 }
 
 .easy-image-container:hover .easy-text {
@@ -83,11 +81,10 @@ export default {
 }
 
 .easy-image {
-    opacity: v-bind(opacity);
+    opacity: v-bind(opacityImg);
     transition: opacity .5s ease-in-out;
     max-width: 100%;
     height: auto;
-    /* object-fit: cover */
-    border-radius: 4%;
+    border-radius: 10px;
 }
 </style>
