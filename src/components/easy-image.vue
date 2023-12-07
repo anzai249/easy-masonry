@@ -8,7 +8,7 @@
                 {{ description }}
             </div>
         </div>
-        <img class="easy-image" :src="imgSrc" />
+        <img class="easy-image" :src="imgSrc" @load="handleLoad()" />
     </div>
 </template>
 
@@ -27,13 +27,23 @@ export default {
             type: String,
             default: 'Description'
         }
+    },
+    data() {
+        return {
+            opacity: 0
+        }
+    },
+    methods: {
+        handleLoad() {
+            this.opacity = 1;
+        }
     }
 }
 </script>
 
 <style>
 .easy-image-container {
-    /* background-color: aqua; */
+    background-color: rgba(100, 100, 100, 0.4);
     position: relative;
     /* width: 500px; */
     /* height: 500px; */
@@ -52,7 +62,7 @@ export default {
 
 .easy-text {
     opacity: 0;
-    transition: opacity .2s;
+    transition: opacity .2s ease-in-out;
     position: absolute;
     backdrop-filter: blur(10px);
     background-color: rgba(255, 255, 255, 0.4);
@@ -73,6 +83,8 @@ export default {
 }
 
 .easy-image {
+    opacity: v-bind(opacity);
+    transition: opacity .5s ease-in-out;
     max-width: 100%;
     height: auto;
     /* object-fit: cover */
