@@ -66,6 +66,6 @@ MIT
 
 ### Photos
 
-These photos are all taken myself, so I will set them to...
+These showcase photos are all taken myself, so I will set them to...
 
 **Public Domain!!!**
