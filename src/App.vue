@@ -42,7 +42,7 @@ export default {
   }
 }
 
-@media (min-width: 1080px) {
+@media (min-width: 1440px) {
   .easy-list {
     column-count: 4;
   }
