@@ -43,7 +43,7 @@ Check `dist/index.html`, this single file is what you want.
 
 ## Embedding using iframe
 
-Note: This method does not support CORS.
+Note: This method does not support CORS. And sometime it's not working well.
 
 ```html
 <script>
@@ -51,9 +51,21 @@ Note: This method does not support CORS.
         var iframe = document.getElementById("easyMasonry");
         var iframeHeight = iframe.contentWindow.document.body.scrollHeight;
         iframe.height = iframeHeight;
-        }
+    }
 </script>
 
 <iframe id="easyMasonry" height=2000px width=100% scrolling=no 
     src="path/to/your/index" onload="resizeIframe()"></iframe>
 ```
+
+## License
+
+### Code
+
+MIT
+
+### Photos
+
+These photos are all taken myself, so I will set them to...
+
+**Public Domain!!!**
