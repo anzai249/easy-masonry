@@ -83,7 +83,7 @@ export default {
 .easy-image {
     opacity: v-bind(opacityImg);
     transition: opacity .5s ease-in-out;
-    max-width: 100%;
+    width: 100%;
     height: auto;
     border-radius: 10px;
 }
